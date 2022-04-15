@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="ja">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | PhysicsLab</title>
+    <meta http-equiv="Content-Language" content="ja">
+    <title>PhysicsLab</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -79,11 +81,12 @@
         container.className = "unity-mobile";
         // Avoid draining fillrate performance on mobile devices,
         // and default/override low DPI mode on mobile browsers.
-        config.devicePixelRatio = 1;
+        config.devicePixelRatio = 2;
         unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
-        canvas.style.width = "1920px";
-        canvas.style.height = "1080px";
+        container.className = "unity-mobile";
+        // canvas.style.width = "1920px";
+        // canvas.style.height = "1080px";
       }
       loadingBar.style.display = "block";
 
